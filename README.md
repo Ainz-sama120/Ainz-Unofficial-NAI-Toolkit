@@ -227,3 +227,7 @@ Ainz Toolkit is an unofficial community project.
 It is not affiliated with, endorsed by or maintained by NovelAI, Danbooru, Gelbooru or e621.
 
 Users are responsible for complying with the terms, rules and content policies of the websites they use.
+
+## License
+
+Ainz Toolkit is available under the [MIT License](LICENSE).
