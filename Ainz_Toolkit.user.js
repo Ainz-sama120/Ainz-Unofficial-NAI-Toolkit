@@ -3,6 +3,11 @@
 // @namespace    ainz.local.ainz-toolkit
 // @version      3.5.0
 // @description  NovelAI prompt library with fast Main Prompt insertion, categorized Booru tags, combined Tag Sets, local images and collections.
+// @homepageURL  https://github.com/Ainz-sama120/Ainz-Unofficial-NAI-Toolkit
+// @supportURL   https://github.com/Ainz-sama120/Ainz-Unofficial-NAI-Toolkit/issues
+// @updateURL    https://raw.githubusercontent.com/Ainz-sama120/Ainz-Unofficial-NAI-Toolkit/main/Ainz_Toolkit.user.js
+// @downloadURL  https://raw.githubusercontent.com/Ainz-sama120/Ainz-Unofficial-NAI-Toolkit/main/Ainz_Toolkit.user.js
+// @license      MIT
 // @author       Ainz
 // @match        https://novelai.net/*
 // @match        https://danbooru.donmai.us/*
