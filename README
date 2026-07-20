@@ -2,7 +2,7 @@
 
 An unofficial userscript toolkit for NovelAI Image Generation, Danbooru, Gelbooru and e621.
 
-Ainz Toolkit provides a local prompt library, character profiles, reusable tag sets, Booru imports, local image previews, style references, smart collections and direct prompt insertion into NovelAI.
+Ainz Toolkit provides a local prompt library, character profiles, reusable tag sets, Booru imports, locally stored image previews, style-tag extraction, smart collections and direct prompt insertion into NovelAI.
 
 ## Installation
 
@@ -120,7 +120,7 @@ Ainz Toolkit provides a local prompt library, character profiles, reusable tag s
   - Be added as a new variant
   - Be stored as a separate entry
 
-### Style tag library
+### Style tag extraction and library
 
 - Dedicated Style and Artist section for organizing reusable style tags
 - Import NovelAI-generated PNG files and read their embedded generation metadata
@@ -134,7 +134,8 @@ Ainz Toolkit provides a local prompt library, character profiles, reusable tag s
 - Copy or insert all extracted style tags
 - Copy or insert individual style categories
 - No network request is required when importing a local NovelAI PNG
-- This feature only extracts and organizes prompt tags; it does not create, import or use NovelAI Precise Reference data
+- This feature only extracts and organizes prompt tags
+- It does not create, import or use NovelAI Precise Reference data
 
 ### Tag Collection
 
@@ -197,7 +198,7 @@ Ainz Toolkit stores its library, settings and local preview images inside Tamper
 
 It does not store NovelAI credentials, cookies or authentication tokens.
 
-Network requests are limited to supported websites and are used only when required for the currently opened post, image import or an explicitly started refresh or repair action.
+Network requests are limited to supported websites and are used only when required for the currently opened post, an image import or an explicitly started refresh or repair action.
 
 ## Data and updates
 
