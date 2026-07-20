@@ -20,22 +20,176 @@ Ainz Toolkit provides a local prompt library, character profiles, reusable tag s
 
 ## Main features
 
-- Character prompt profiles with positive and negative prompts
+### Prompt library and NovelAI workflow
+
+- Character profiles with separate positive and negative prompts
 - Positive, negative and combined tag sets
-- Reusable base tags
-- Style and artist references
-- Full-image prompt storage
-- Booru post imports
-- Configurable Booru tag categories
-- Optional inclusion of censorship tags
-- Local image previews stored inside Tampermonkey
-- Image variants and comparison tools
-- Tag collection and search
-- Manual and smart collections
-- Direct insertion into NovelAI prompt fields
-- JSON import and export
+- Reusable Base Tag profiles
+- Style and artist profiles with optional negative prompts
+- Full Image snapshots containing:
+  - Main Prompt
+  - Main Undesired Content
+  - Every active character prompt
+  - Every character Undesired Content field
+- Save new library entries directly from the current NovelAI prompt
+- Append or replace content in supported NovelAI fields
+- Insert tags at the cursor, beginning or end of a field
+- Skip exact duplicate tags or allow duplicates
+- Add saved character profiles directly as NovelAI character prompts
+- Selectively restore individual parts of a Full Image snapshot
+- Quick Access page for favorites, recently used entries and prompt actions
+- Usage history and manually saved prompt history states
+- Smart views for recently used, recently created, recently modified and most-used entries
+
+### Booru integration
+
+- Integrated support for Danbooru, Gelbooru and e621
+- Import tags and image metadata from the currently opened post
+- Select and batch-import multiple posts from listing pages
+- Per-website import profiles
+- Choose which tag categories are imported
+- Choose which tag categories are included in copy actions
+- Keep underscores or convert them to spaces
+- Optional inclusion of censorship tags, disabled by default
+- Optional `+` buttons beside individual tags
+- Copy presets for:
+  - Artist
+  - Character and copyright
+  - General tags
+  - Text tags
+  - All tags without text
+  - Scene, action and style tags
+  - All enabled profile tags
+- Automatic filtering of technical request tags and non-prompt metadata
+- Special scene-tag handling for human, animal and furry content
+- Configurable delay for batch imports
+
+### Imported images and variants
+
+- Store imported posts as reusable prompt entries
+- Keep original Booru tag categories
+- Store source website, post ID, dimensions, file information and other available metadata
+- Group related images together as variants instead of filling the library with separate entries
+- Browse and switch variants directly from cards and detail views
+- Compare two variants side by side
+- Overlay two variants with adjustable opacity
+- Copy or insert all tags from a variant
+- Copy or insert individual tag categories
+- Filter imported entries by:
+  - Website
+  - Artist
+  - Character
+  - Copyright
+  - Tags
+  - Favorite status
+  - Number of variants
+  - Local image availability
+- Sort and group imported entries by several metadata fields
+- Customizable automatic naming templates for imports
+- Preview mass renaming before applying it
+- Protection for manually edited names
+- Undo support for mass renaming and other larger changes
+
+### Local image storage
+
+- Store compressed local preview images inside Tampermonkey
+- Multiple selectable local image quality levels
+- Shared local images for lists, details and comparisons
+- Local-only images in normal library lists
+- Web access only after an explicit import, detail, refresh or repair action
+- Verified image storage with read-back checks
+- Automatic recovery of matching unreferenced image records when possible
+- Detection of missing and orphaned local images
+- Manual thumbnail replacement from a local file
+- Reload individual images from their stored source
+- Rebuild or refresh image data in bulk
+- Pause or cancel longer batch operations
+- Local Image Storage statistics
+
+### Duplicate and similarity handling
+
+- Exact source and post-ID duplicate detection
+- File metadata and hash-based matching where available
+- Visual similarity suggestions using perceptual image fingerprints
+- Configurable visual matching sensitivity
+- Recognition of close variants such as edits and recolors
+- Suggested matches are never merged automatically
+- Choose whether a detected image should:
+  - Be skipped
+  - Update an existing entry
+  - Be added as a new variant
+  - Be stored as a separate entry
+
+### Style tag library
+
+- Dedicated Style and Artist section for organizing reusable style tags
+- Import NovelAI-generated PNG files and read their embedded generation metadata
+- Extract style-related tags from the embedded positive prompt
+- Recognize art styles, art movements, media, techniques, lighting styles, color treatments and visual effects
+- Review the detected style tags before saving
+- Manually add or remove recognized tags
+- Store the original PNG locally alongside its extracted style tags
+- Browse saved images by their recognized style tags
+- Favorite individual images and style-tag combinations
+- Copy or insert all extracted style tags
+- Copy or insert individual style categories
+- No network request is required when importing a local NovelAI PNG
+- This feature only extracts and organizes prompt tags; it does not create, import or use NovelAI Precise Reference data
+
+### Tag Collection
+
+- Automatically indexed tag collection built from saved image entries
+- Search tags across the local imported-image library
+- Frequency count for each indexed tag
+- View every saved image containing a selected tag
+- Copy a selected tag
+- Insert a selected tag directly into NovelAI
+- Normalization and repair of malformed or duplicated tag values
+- Protection against complete prompts being incorrectly indexed as one tag
+
+### Collections and organization
+
+- Manual Collections for hand-picked entries
+- Smart Collections generated from configurable rules
+- Search within:
+  - Imported images
+  - Characters
+  - Tag Sets
+  - Base Tags
+  - Styles
+  - Full Images
+  - Saved tags
+  - The entire library
+- Match all rules or any rule
+- Rules for tags, artists, characters, copyrights, species, sources, categories, favorites, variant counts and image status
+- Live preview showing how many entries match before saving
+- Explicit include and exclude exceptions for Smart Collections
+- Up to three levels of automatic virtual folders
+- Group Collection results by artist, character, copyright, website, category, year and other fields
+- Collections reference existing entries without duplicating library data
+- Global search across the complete library
+- Favorites across profiles, sets, styles, imports, Full Images and tags
+- Configurable start page
+- Hide and reorder sidebar sections
+- Grid and list layouts
+- Multiple accent colors
+
+### Data safety and maintenance
+
+- JSON export of the complete portable library
+- Optional inclusion of locally stored preview images in exports
+- Merge an exported library with existing data
+- Replace the current library with an imported export
+- Transaction-verified imports, migrations and full replacements
+- Revision-aware saving
 - Multi-tab synchronization
-- Local library diagnostics and repair tools
+- Patch-based Undo for supported changes
+- Local Library Health Check
+- Detection of damaged entries, invalid references and image-storage inconsistencies
+- Review issues before starting a repair
+- Manual NovelAI field diagnostic scan
+- Local performance diagnostics
+- Complete local data reset from the settings menu
 
 ## Privacy
 
